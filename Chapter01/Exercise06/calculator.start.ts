@@ -4,6 +4,7 @@ enum Operator {
     Subtract = "subtract",
     Multiply = "multiply",
     Divide = "divide",
+    Modulo = "modulo",
 }
 
 // Type alias for a function that does a calculation on two numbers. 
@@ -37,7 +38,14 @@ const divide = function (first: number, second: number) {
 };
 operations.push([Operator.Divide, divide]);
 
+const modulo = function(first: number, second: number) {
+    return first % second
+}
+
+operations.push([Operator.Modulo, modulo]);
+
 const calculator = function (first: number, second: number, op: Operator) {
+    // the ! tells typescript this cannot be undefined or null
     const tuple = operations.find(tpl => tpl[0] === op)!;
     const operation = tuple[1];
     const result = operation(first, second);
