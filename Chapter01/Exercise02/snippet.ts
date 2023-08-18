@@ -22,25 +22,22 @@ function snippet (text: string, length: number) : string {
 }
 
 // correct call and usage
-var resultOne = snippet("TypeScript is a programming language that is a strict syntactical superset of JavaScript and adds optional static typing to the language.", 40);
+const resultOne = snippet("TypeScript is a programming language that is a strict syntactical superset of JavaScript and adds optional static typing to the language.", 40);
 console.log(resultOne);
 
-/* COMMENT FROM HERE  */
 
-// missing second parameter
-var resultTwo = snippet("Lorem ipsum dolor sit amet");
-console.log(resultTwo);
+// missing second parameter -  type error
+// const resultTwo = snippet("Lorem ipsum dolor sit amet");
+// console.log(resultTwo);
 
-// The first parameter is of incorrect type
-var resultThree = snippet(false, 40);
-console.log(resultThree);
+// The first parameter is of incorrect type - type error
+// const resultThree = snippet(false, 40);
+// console.log(resultThree);
 
-// The second parameter is of incorrect type
-var resultFour = snippet("Lorem ipsum dolor sit amet", false);
-console.log(resultFour);
+// The second parameter is of incorrect type - type error
+// const resultFour = snippet("Lorem ipsum dolor sit amet", false);
+// console.log(resultFour);
 
 // The result is assigned to a variable of incorrect type
-var resultFive = snippet("Lorem ipsum dolor sit amet", 20);
-console.log(resultFive);
-
-/* COMMENT TO HERE  */
+// const resultFive = snippet("Lorem ipsum dolor sit amet", 20);
+// console.log(resultFive);
