@@ -5,6 +5,7 @@
 interface Book {
     author: string;
     title: string;
+    // optional props on interface
     pages?: number;
     isRead?: boolean;
 }
@@ -13,6 +14,8 @@ interface Book {
 // It also displays whether the book is read or not, if the `isRead` property is present.
 function showBook(book: Book) {
     console.log(`${book.author} wrote ${book.title}`);
+    // type guard to check if is read is present
+    // if not present it will be undefined
     if (book.isRead !== undefined) {
         console.log(`  I have ${book.isRead ? "read" : "not read"} this book`);
     }
