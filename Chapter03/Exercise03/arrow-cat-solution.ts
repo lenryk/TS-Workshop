@@ -17,6 +17,8 @@ export const arrayToObjectSegment = (words: string[]): string => {
 };
 
 export const capitalize = (sentence: string): string => {
+  // Make the first letter capital
+  // Take everything from index 1 onwards and set to lowercase
   return `${sentence.charAt(0).toUpperCase()}${sentence
     .slice(1)
     .toLowerCase()}`;
