@@ -9,6 +9,8 @@ export const orderFactory = (): ((
   size: string,
   qty: number
 ) => Order[]) => {
+  // here we return a function
+  // this id is returned and used for every function call
   let id = 0;
   return (color: string, size: string, qty: number): Order[] => {
     const orders = [];
